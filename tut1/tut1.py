@@ -1,21 +1,19 @@
-from flask import Flask, render_template
-
+from flask import Flask,render_template
 app = Flask(__name__)
-
 
 @app.route("/")
 def hello():
-    return render_template('home.html')
+    return render_template('index.html')
 
 
 @app.route("/ravi")
 def ravi():
-    return "<h1 style='color:red;'>Hello Ravi</h1>"
-
+    return "Hello Ravi!"
 
 @app.route("/about")
 def about():
-    return render_template('about.html')
+    name = "Ravi Prakash"
+    return render_template('about.html', name=name)
 
 
 app.run(debug=True)

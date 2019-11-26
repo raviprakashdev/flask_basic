@@ -1,0 +1,17 @@
+{
+  "params":
+  {
+    "local_server":"True",
+    "local_uri": "mysql://root:@localhost/codingthunder",
+    "prod_uri": "mysql://root:@localhost/codingthunder",
+    "fb_url": "http://www.raviprakashdev.tech",
+    "twitter_url": "http://www.raviprakashdev.tech",
+    "blog_name": "Ravi Prakash",
+    "blog_tag": "A Blog Theme On Flask For Learning",
+    "gmail-user": "raviprakash01a@gmail.com",
+    "gmail-password":"",
+    "about": "I am Ravi Prakash I am sdfghjk fghjk fghjk rtyujk dfghjk dfghjd fghjmd dfghj dfghjm fghjk dfghjk fghj deghjk fghjkef fghjsd",
+    "admin_user": "ravi",
+    "admin_pass": "ravi"
+  }
+}
