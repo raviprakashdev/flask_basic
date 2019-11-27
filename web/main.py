@@ -9,7 +9,7 @@ with open('config.json', 'r') as c:
     params = json.load(c)["params"]
 
 app = Flask(__name__)
-app.secret_key= 'super-secret-key'
+app.secret_key = 'super-secret-key'
 # app.config.update(
 #     Mail_SERVER='smtp.gmail.com',
 #     MAIL_PORT='465',
@@ -60,15 +60,17 @@ def about():
 
 @app.route("/dashboard", methods=['GET', 'POST'])
 def dashboard():
-    if 'user' in session and session['user']==params['admin_user']:
-        return render_template('dashboard.html')
+    if 'user' in session and session['user'] == params['admin_user']:
+        posts = Post.query.all()
+        return render_template('dashboard.html', params=params, posts=posts)
 
     if request.method=='POST':
        username = request.form.get('uname')
        userpass = request.form.get('pass')
        if (username == params['admin_user'] and userpass == params['admin_pass']):
            session['user'] = username
-           return render_template('dashboard.html')
+           posts = Post.query.all()
+           return render_template('dashboard.html', posts=posts)
 
     return render_template('login.html', params=params)
 
