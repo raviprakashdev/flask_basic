@@ -3,7 +3,7 @@
 {% block body%}
 
   <!-- Page Header -->
-  <header class="masthead" style="background-image: url('    {{ url_for('static', filename='img/home-bg.jpg ') }}   ')">
+  <header class="masthead" style="background-image: url('{{ url_for('static', filename='img/home-bg.jpg ')}}')">
     <div class="overlay"></div>
     <div class="container">
       <div class="row">
@@ -21,10 +21,22 @@
   <div class="container">
     <div class="row">
       <div class="col-lg-8 col-md-10 mx-auto">
-
+            <h1>Basic actions</h1>
+            <a href="/edit/0"><button class="btn btn-primary">add a new post</button></a>
+            <a href="/logout"><button class="btn btn-primary">Logoutt</button></a>
+        
+            
+            
+            <hr>
         <h1>Upload a file</h1>
         <div class="row">
-           <h4>we will upload a file  </h4> 
+           <!-- <h4>we will upload a file  </h4>  -->
+           <form action="/uploader" method="POST" enctype="multipart/form-data">
+
+            <input type="file" name="file1">
+            <button type="submit" class="btn btn-primary">Submit</button>
+
+           </form>
         </div>
         <h1>Edit Posts</h1>
         
@@ -47,7 +59,7 @@
                     <td>{{post.title}}</td>
                     <td>{{post.date}}</td>
                     <td><a href="/edit/{{post.sno}}"><button class="btn btn-primary">Edit</button></a></td>
-                    <td><a href="/delete/{{post.sno}}"></a><button class="btn btn-primary">Delete</button></a></td>
+                    <td><a href="/delete/{{post.sno}}"><button class="btn btn-primary">Delete</button></a></td>
                   </tr>
                   
                   {% endfor %}

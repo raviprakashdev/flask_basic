@@ -11,7 +11,9 @@
     "gmail-user": "raviprakash01a@gmail.com",
     "gmail-password":"",
     "about": "I am Ravi Prakash I am sdfghjk fghjk fghjk rtyujk dfghjk dfghjd fghjmd dfghj dfghjm fghjk dfghjk fghj deghjk fghjkef fghjsd",
+    "no_of_posts": 2,
     "admin_user": "ravi",
-    "admin_pass": "ravi"
+    "admin_pass": "ravi",
+    "upload_location": "D:\\Passive_Projects\\cwh\\flask\\flasktut1\\static"
   }
 }
